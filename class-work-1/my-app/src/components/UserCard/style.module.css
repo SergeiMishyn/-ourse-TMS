@@ -1,6 +1,6 @@
 .conteiner {
-    width: 400px;
-    height: 300px;
+    width: 250px;
+    height: 100px;
     background-color: blue;
     display: flex;
     align-items: center;
@@ -10,17 +10,21 @@
 }
 
 .userFL{
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.175);
-    text-align: center;
-    padding-top: 40px;
+    color: white;
+    width: 40px;
+    height: 60px;
+    background-color: rgba(115, 156, 232, 0.834);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .user{
-    width: 100px;
-    height: 100px;
-    background-color: blueviolet;
-    text-align: center;
-    padding-top: 40px;
+    width: 150px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 
 }
