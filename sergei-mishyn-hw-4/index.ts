@@ -196,3 +196,10 @@ function getId(movie, str, name) {
 }
 console.log(getId(movies,'title','Star Wars'))
 
+
+
+
+
+  
+const genreMovies = movies.map(({ genre }) => genre.join(',')).join(',').split(',').filter((el, index, array) => array.indexOf(el) === index);
+console.log(genreMovies)
