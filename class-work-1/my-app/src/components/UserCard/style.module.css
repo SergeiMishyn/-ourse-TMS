@@ -1,4 +1,4 @@
-.conteiner {
+.container {
     width: 250px;
     height: 100px;
     background-color: blue;
@@ -27,4 +27,12 @@
     align-items: center;
     
 
+}
+
+.userDark{
+    background-color: grey;
+}
+
+.container {
+    background-color: black;
 }

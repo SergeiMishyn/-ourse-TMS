@@ -12,8 +12,8 @@ function App() {
     <div>
     <Title text='Hi React Component'/>
     <Button text="Hello"></Button>
-    <Input placeholder="fdsifs"/>
-    <UserCard UserName='Sergei Mishyn'/>
+    <Input placeholder="text"/>
+    <UserCard UserName='Sergei Mishyn' isDark={true}/>
     </div>
   )
 }
