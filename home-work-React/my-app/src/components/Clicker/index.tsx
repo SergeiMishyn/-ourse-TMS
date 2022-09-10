@@ -15,22 +15,23 @@ export const Clicker = () => {
         <div>
             {clickCount >= 10 && (
                 <div>
-                    <h2>Я устал</h2>
-                    <Button onClick={onClickMinus} text={"-"} />
+                    <h2>it's too many clicks</h2>
+                    <Button onClick={onClickMinus} text={"-"} type={'secondary'}/>
                 </div>
             )}
             {clickCount <= 0 && (
                 <div>
-                    <h2>Lets go</h2>
-                    <Button text={"+"} onClick={onClickPlus}
+                    <h2>Let's go</h2>
+                    <Button text={"+"} onClick={onClickPlus} type={'secondary'}
                     />
                 </div>
             )}
             {clickCount > 0 && clickCount < 10 && (
                 <div>
                     <h2>{clickCount}</h2>
-                    <Button text={"+"} onClick={onClickPlus} />
-                    <Button text={"-"} onClick={onClickMinus} />
+                    
+                    <Button text={"-"} onClick={onClickMinus} type={'secondary'}/>
+                    <Button text={"+"} onClick={onClickPlus} type={'secondary'}/>
                 </div>
             )}
         </div>

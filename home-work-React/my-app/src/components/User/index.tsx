@@ -5,7 +5,7 @@ interface Props {
 
 }
 
-export function UserCard(props: Props)  {
+export function UserCard (props: Props)  {
 
     const fullName = props.UserName.split(' ');
     const  firstLastName = fullName[0][0].concat(fullName[1][0]);
@@ -17,3 +17,4 @@ export function UserCard(props: Props)  {
         </div>
         )
 }
+

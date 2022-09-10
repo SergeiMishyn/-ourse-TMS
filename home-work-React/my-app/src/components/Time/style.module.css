@@ -1,0 +1,15 @@
+.clock {
+  width: 150px;
+  height: 30px;
+  color: #047bff;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  border: 2px solid #047bff;
+  border-radius: 40px;
+  box-shadow: 0 5px 10px 0 rgba(4,123,255, .3);
+  
+}

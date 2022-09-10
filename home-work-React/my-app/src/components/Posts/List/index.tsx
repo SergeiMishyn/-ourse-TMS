@@ -1,6 +1,5 @@
 import { IPost } from "../../Types/post";
 import { ItemOfPost } from "../Item";
-import image from "./kartinka.png"
 import style from "./style.module.css";
 
 interface IProps {
