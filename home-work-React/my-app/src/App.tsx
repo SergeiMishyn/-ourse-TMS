@@ -1,10 +1,14 @@
+import { createContext, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import { Button, onClickLogin, onClickLogout, onClickSignUp } from "./components/Button";
 import { Clicker } from "./components/Clicker";
 import { Converter } from "./components/Convertor";
+import { DarkModeToggle } from "./components/DarkModeToggle";
+
 import { EmojiList } from "./components/Emoji/List/Index";
 import { Header } from "./components/Header/Header";
+
 import { Input } from "./components/Input";
 import { LoginForm } from "./components/LoginForm";
 import { PostList } from "./components/Posts/List";
@@ -19,22 +23,39 @@ import { Login } from "./pages/Login";
 
 import { Main } from "./pages/Main";
 import { Registration } from "./pages/Registration";
+import { Success } from "./pages/Success";
+import { RootRouter } from "./Router";
+
+
+export const Context = createContext<{
+  isDark: boolean; 
+  setIsDark: ((value: boolean)=> void)
+}>({ isDark: false, setIsDark: ()=> {}});
 
 function App() {
+
+  const [isDark, setIsDark] = useState(false)
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <Main/> */}
-        {/* <Login/> */}
-        {/* <Registration/> */}
+        <Context.Provider value={{ isDark: isDark, setIsDark: setIsDark }}>
+          <RootRouter/>
+        </Context.Provider>
+        
 
-        <Header/>
+
+        {/* <Registration/> */}
+        {/* <Main/> */}
+        {/* <Success/> */}
+        {/* <Converter/> */}
+
+        {/* <Header/>
         <Converter/>
         <Timer/>
         <Clicker/>
         <PostList posts={posts}/>
         <EmojiList></EmojiList>
-        <TodoList/>
+        <TodoList/> */}
 
         
           {/* <Title text="Hi React"/>
@@ -57,3 +78,7 @@ function App() {
 }
 
 export default App;
+function useTate(arg0: boolean): [any, any] {
+  throw new Error("Function not implemented.");
+}
+

@@ -1,0 +1,16 @@
+.darkContainer {
+  height: 100vh;
+  background: url('./vector.svg') right bottom no-repeat ;
+  background-color: #09161cf9;
+  background-blend-mode: color-burn;
+}
+
+.whiteContainer {
+  height: 100vh;
+  background: url('./vector.svg') right bottom no-repeat ;
+  background-blend-mode: color-burn;
+
+}
+
+
+

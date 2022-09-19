@@ -11,23 +11,6 @@ interface IProps {
 export const Item = (props: IProps) => {
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      console.log("setInterval");
-      setCount((state) => state + 1);
-    }, 1000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (count === 5) {
-      alert("555555");
-    }
-  }, [count]);
-
   return (
     <div style={{ border: "1px solid black", marginBottom: "10px" }}>
       <input
@@ -41,6 +24,19 @@ export const Item = (props: IProps) => {
     </div>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export class Item1 extends Component<IProps> {
   componentDidMount() {

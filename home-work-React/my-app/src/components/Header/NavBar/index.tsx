@@ -1,8 +1,9 @@
+
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Context } from '../../../App';
 import { closeBarImg } from '../../../assets';
 import { DarkModeToggle } from '../../DarkModeToggle';
-
-
 import styles from './style.module.css';
 
 interface IProps {
@@ -10,11 +11,17 @@ interface IProps {
 }
 
 export const NavBar = ({onClose}:IProps) => {
+  const {isDark, setIsDark} = useContext(Context);
 
-
+  const handleOnChange = () => {
+    if(isDark){
+      setIsDark(false);
+    } else {
+      setIsDark(true)
+    }}
 
   return (
-    <div className={styles.navBar}>
+    <div className={isDark ? styles.navBarDark : styles.navBar}>
       <nav className={styles.containerNavBar}>
         <div>
           <button onClick={onClose} className={styles.closeMenuButton}>
@@ -34,7 +41,7 @@ export const NavBar = ({onClose}:IProps) => {
               </li>
             </ul>
           <div>
-            <DarkModeToggle inputChecked={false} onChange={()=>{}}/>
+            <DarkModeToggle inputChecked={isDark} onChange={handleOnChange}/>
           </div>
         </div>
       </nav>

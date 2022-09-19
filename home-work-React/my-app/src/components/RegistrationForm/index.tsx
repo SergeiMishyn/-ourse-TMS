@@ -47,7 +47,7 @@ export const RegistrationForm = () => {
             <div>
               <Button onClick={submit} text={"Login"} type={'secondary'}/>
             </div>
-            <p>If you have account, you can <a href="#">login</a></p>
+            <p>If you have account, you can <a href="/Login">login</a></p>
         </div >
     );
 }

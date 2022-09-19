@@ -1,10 +1,11 @@
-import { ChangeEventHandler } from "react";
-import style from "./style.module.css";
+import { ChangeEventHandler, useContext } from "react";
+import { Context } from "../../App";
+import styles from "./style.module.css";
 
 
 type InputColorType = "login";
 interface Input {
-  type?: InputColorType;
+  type?: any;
   value: string;
   placeholder?: string;
   refObj?: any;
@@ -13,15 +14,18 @@ interface Input {
 
 
 const getInputStyle = (type: InputColorType) => {
+
   if (type === "login") {
-    return style.login;
+    return styles.login;
   }
 
 };
 export const Input = (props: Input) => {
+  const { isDark } = useContext(Context);
+  
   return (
     <input
-      className={`${style.input} ${getInputStyle}`}
+      className={`${styles.input} ${isDark ? styles.darkInput : ""}`}
       value={props.value}
       placeholder={props.placeholder}
       onChange={props.onChange}

@@ -2,12 +2,10 @@
 
 .header {
   width: 1220px;
-  padding: 0 20px;
   height: 250px;
   display: flex;
-  margin: 0 auto;
   position: relative;
-  margin-bottom: 50px;
+  margin: 0 auto 20px;
 
 }
 
